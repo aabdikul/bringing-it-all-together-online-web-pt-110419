@@ -53,7 +53,6 @@ def self.find_by_id(id)
   WHERE id = ?
   SQL
   DB[:conn].execute(sql,id)
-  self.id
 end
 
 end
