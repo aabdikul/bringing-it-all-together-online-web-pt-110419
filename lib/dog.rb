@@ -52,7 +52,7 @@ def self.find_by_id(value)
   SELECT * FROM dogs
   WHERE id = ?
   SQL
-  DB[:conn].execute(sql,value)
+  DB[:conn].execute(sql,value).flatten
 end
 
 end
