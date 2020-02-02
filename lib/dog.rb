@@ -47,12 +47,12 @@ def self.new_from_db(row)
   new_dog
 end
 
-def self.find_by_id(value)
+def self.find_by_id(id)
   sql = <<-SQL
   SELECT * FROM dogs
   WHERE id = ?
   SQL
-  DB[:conn].execute(sql,value).flatten
+  DB[:conn].execute(sql,id)
 end
 
 end
